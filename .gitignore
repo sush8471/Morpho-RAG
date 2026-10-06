@@ -1,0 +1,42 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+
+# Data & documents
+data/*
+!data/.gitkeep
+
+# Vector DB / Qdrant storage
+qdrant_storage/
+qdrant_data/
+storage/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Frontend / Node
+node_modules/
+.npm/
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
