@@ -24,14 +24,17 @@ export const CitationDrawer: React.FC<CitationDrawerProps> = ({ citation, onClos
 
   if (!citation) return null;
 
+  const sectionTitle = citation.section_title || `Section ${citation.section_id}`;
+  const quoteContent = citation.verbatim_quote || citation.quote || "";
+
   const isAmendment =
     citation.section_id === "5.5.2" ||
     citation.section_id === "7.2" ||
-    citation.section_title.toLowerCase().includes("amendment");
+    sectionTitle.toLowerCase().includes("amendment");
 
   const handleCopyQuote = async () => {
     try {
-      await navigator.clipboard.writeText(citation.verbatim_quote);
+      await navigator.clipboard.writeText(quoteContent);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (e) {
@@ -106,7 +109,7 @@ export const CitationDrawer: React.FC<CitationDrawerProps> = ({ citation, onClos
                 lineHeight: 1.35,
               }}
             >
-              {citation.section_title}
+              {sectionTitle}
             </h2>
           </div>
 
@@ -205,7 +208,7 @@ export const CitationDrawer: React.FC<CitationDrawerProps> = ({ citation, onClos
               whiteSpace: "pre-wrap",
             }}
           >
-            {citation.verbatim_quote}
+            {quoteContent}
           </div>
         </div>
 

@@ -9,19 +9,23 @@ interface AmendmentBannerProps {
 }
 
 export const AmendmentBanner: React.FC<AmendmentBannerProps> = ({ citations }) => {
-  const hasAmendment1 = citations.some(
-    (c) =>
+  const hasAmendment1 = citations.some((c) => {
+    const q = (c.verbatim_quote || c.quote || "").toLowerCase();
+    return (
       c.section_id === "5.5.2" ||
-      c.verbatim_quote.includes("Amendment 1") ||
-      c.verbatim_quote.includes("500 MRL") ||
-      c.verbatim_quote.includes("500")
-  );
-  const hasAmendment2 = citations.some(
-    (c) =>
+      q.includes("amendment 1") ||
+      q.includes("500 mrl") ||
+      q.includes("500")
+    );
+  });
+  const hasAmendment2 = citations.some((c) => {
+    const q = (c.verbatim_quote || c.quote || "").toLowerCase();
+    return (
       c.section_id === "7.2" ||
-      c.verbatim_quote.includes("Amendment 2") ||
-      c.verbatim_quote.includes("3,000")
-  );
+      q.includes("amendment 2") ||
+      q.includes("3,000")
+    );
+  });
 
   if (!hasAmendment1 && !hasAmendment2) return null;
 

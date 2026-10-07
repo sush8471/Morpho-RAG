@@ -209,9 +209,9 @@ async def chat_stream_endpoint(req: ChatRequest) -> EventSourceResponse:
         }
         await asyncio.sleep(0.05)
 
-        # Generate grounded result
+        # Generate grounded result without re-running retrieval
         result = await asyncio.to_thread(
-            rag_generator.generate, req.query, req.top_k
+            rag_generator.generate, req.query, req.top_k, retrieved_chunks
         )
 
         answer_text = result["answer"]

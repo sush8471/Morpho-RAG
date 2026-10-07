@@ -1,8 +1,10 @@
 export interface Citation {
+  chunk_id?: string;
   section_id: string;
-  section_title: string;
+  section_title?: string;
   page: number;
-  verbatim_quote: string;
+  quote?: string;
+  verbatim_quote?: string;
 }
 
 export interface RetrievedChunk {

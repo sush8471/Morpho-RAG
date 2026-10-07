@@ -106,10 +106,12 @@ class RAGGenerator:
         self,
         query: str,
         top_k: int = 5,
+        retrieved_chunks: list[dict[str, Any]] | None = None,
     ) -> dict[str, Any]:
         """Retrieve relevant chunks and generate a grounded, cited answer."""
-        # 1. Retrieve candidates
-        retrieved_chunks = self.retriever.retrieve(query, top_k=top_k)
+        # 1. Retrieve candidates if not provided
+        if retrieved_chunks is None:
+            retrieved_chunks = self.retriever.retrieve(query, top_k=top_k)
 
         # 2. Format context
         context_str = self.format_context(retrieved_chunks)
@@ -153,11 +155,41 @@ Provide a grounded, cited answer following your system instructions:"""
         # 5. Parse response
         parsed = json.loads(response_text)
 
+        # Build section_title and section metadata lookup from retrieved_chunks
+        sec_title_map: dict[str, str] = {}
+        for c in retrieved_chunks:
+            p = c.get("payload", {})
+            if p.get("section_id") and p.get("section_title"):
+                sec_title_map[p["section_id"]] = p["section_title"]
+            if p.get("chunk_id") and p.get("section_title"):
+                sec_title_map[p["chunk_id"]] = p["section_title"]
+
+        raw_citations = parsed.get("citations", [])
+        enriched_citations = []
+        for cit in raw_citations:
+            chk_id = cit.get("chunk_id", "")
+            sec_id = cit.get("section_id", "")
+            quote_str = cit.get("quote", "")
+            title = (
+                sec_title_map.get(sec_id)
+                or sec_title_map.get(chk_id)
+                or f"Section {sec_id}"
+            )
+            enriched_citations.append({
+                "chunk_id": chk_id,
+                "section_id": sec_id,
+                "section_title": title,
+                "page": cit.get("page", 1),
+                "quote": quote_str,
+                "verbatim_quote": quote_str,
+            })
+
         return {
             "query": query,
             "answer": parsed.get("answer", ""),
-            "citations": parsed.get("citations", []),
+            "citations": enriched_citations,
             "refusal": parsed.get("refusal", False),
             "model_used": model_used,
             "retrieved_chunks": retrieved_chunks,
         }
+
