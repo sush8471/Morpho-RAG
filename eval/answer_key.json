@@ -1,0 +1,337 @@
+{
+  "document": "Northfield Institute of Technology - Student Academic Policy Handbook, Edition 5.0 (fictional test document)",
+  "notes": [
+    "Section numbers refer to the numbered headings in the handbook; page numbers are intentionally omitted.",
+    "For exception questions, 'sections' lists the section where the answer appears first, then the general rule it modifies.",
+    "For multi-section questions the answer needs facts from every listed section.",
+    "Amounts are in the fictional currency Marel (MRL)."
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "simple fact",
+      "question": "What is the minimum percentage of scheduled class sessions a student must attend in a course to be eligible for the end-semester examination in that course?",
+      "answer": "75%",
+      "sections": [
+        "3.1"
+      ]
+    },
+    {
+      "id": "Q02",
+      "type": "simple fact",
+      "question": "How many teaching days does a full semester contain?",
+      "answer": "80 teaching days (16 teaching weeks of 5 teaching days).",
+      "sections": [
+        "1.3.1"
+      ]
+    },
+    {
+      "id": "Q03",
+      "type": "simple fact",
+      "question": "After how many hours is a notice posted on the Student Portal deemed received by the student?",
+      "answer": "48 hours after posting.",
+      "sections": [
+        "1.5"
+      ]
+    },
+    {
+      "id": "Q04",
+      "type": "simple fact",
+      "question": "What is the application fee for admission, and is it refundable?",
+      "answer": "MRL 1,000; it is not refundable.",
+      "sections": [
+        "2.3"
+      ]
+    },
+    {
+      "id": "Q05",
+      "type": "simple fact",
+      "question": "How many contact hours of laboratory work represent one credit?",
+      "answer": "32 contact hours of laboratory work per semester (16 for lectures or tutorials).",
+      "sections": [
+        "4.1"
+      ]
+    },
+    {
+      "id": "Q06",
+      "type": "simple fact",
+      "question": "What two minimums must a student reach to pass a theory course?",
+      "answer": "At least 40% of the total marks and at least 35% of the maximum marks in the end-semester examination.",
+      "sections": [
+        "4.3"
+      ]
+    },
+    {
+      "id": "Q07",
+      "type": "simple fact",
+      "question": "What similarity score causes a written assignment to be referred automatically to the Academic Integrity Panel?",
+      "answer": "A score above 40% (a score above 25% triggers faculty review only).",
+      "sections": [
+        "6.2"
+      ]
+    },
+    {
+      "id": "Q08",
+      "type": "simple fact",
+      "question": "By what time must hostel residents be inside their residence block?",
+      "answer": "22:00 (the gates reopen at 05:30).",
+      "sections": [
+        "9.3"
+      ]
+    },
+    {
+      "id": "Q09",
+      "type": "simple fact",
+      "question": "What is the maximum number of semesters of leave of absence a student may take during a programme?",
+      "answer": "2 semesters.",
+      "sections": [
+        "10.3"
+      ]
+    },
+    {
+      "id": "Q10",
+      "type": "simple fact",
+      "question": "How many members does the Student Grievance Committee have?",
+      "answer": "Six: the Dean of Student Welfare (chair), two faculty members, two student representatives and one nominee of the Registrar.",
+      "sections": [
+        "11.1"
+      ]
+    },
+    {
+      "id": "Q11",
+      "type": "simple fact",
+      "question": "How many books may a postgraduate student borrow from the library, and for how long?",
+      "answer": "10 books for 30 days.",
+      "sections": [
+        "12.2"
+      ]
+    },
+    {
+      "id": "Q12",
+      "type": "simple fact",
+      "question": "What is the minimum length, and the credit value, of the mandatory B.Tech internship?",
+      "answer": "At least 8 weeks, worth 6 credits.",
+      "sections": [
+        "13.1"
+      ]
+    },
+    {
+      "id": "Q13",
+      "type": "table lookup",
+      "question": "How many annual seats does the B.Sc. Applied Data Science programme have?",
+      "answer": "120 seats.",
+      "sections": [
+        "2.1"
+      ]
+    },
+    {
+      "id": "Q14",
+      "type": "table lookup",
+      "question": "A student has 65% attendance in a course. What is the consequence and the condonation fee?",
+      "answer": "Eligible only after condonation approved by the Dean of Academic Affairs (60% to below 70% band); fee MRL 2,500 per course.",
+      "sections": [
+        "3.3"
+      ]
+    },
+    {
+      "id": "Q15",
+      "type": "table lookup",
+      "question": "How many grade points does a student receive for a total of 72% in a course?",
+      "answer": "8 grade points (letter grade B+, band 70 to 79).",
+      "sections": [
+        "4.4"
+      ]
+    },
+    {
+      "id": "Q16",
+      "type": "table lookup",
+      "question": "On what dates are the Spring 2027 end-semester examinations held?",
+      "answer": "3 to 14 May 2027.",
+      "sections": [
+        "5.1"
+      ]
+    },
+    {
+      "id": "Q17",
+      "type": "table lookup",
+      "question": "What is the tuition fee per semester for the M.Tech programme?",
+      "answer": "MRL 48,000.",
+      "sections": [
+        "7.1"
+      ]
+    },
+    {
+      "id": "Q18",
+      "type": "table lookup",
+      "question": "What percentage of the tuition fee is refunded if a withdrawal notice is received 30 days after the semester start date?",
+      "answer": "30% (band: 22 to 35 days after the start date).",
+      "sections": [
+        "7.4"
+      ]
+    },
+    {
+      "id": "Q19",
+      "type": "table lookup",
+      "question": "Which merit scholarship tier gives a 50% tuition waiver, what is its minimum CGPA, and how many awards are made per year?",
+      "answer": "Tier 2, the Northfield Excellence Award; minimum CGPA 8.50; 40 annual awards.",
+      "sections": [
+        "8.2"
+      ]
+    },
+    {
+      "id": "Q20",
+      "type": "multi-section",
+      "question": "A B.Tech student submits a withdrawal notice on the Student Portal that the Registrar receives on 17 August 2026. How much tuition fee is refunded?",
+      "answer": "MRL 25,200. The Autumn 2026 semester starts on 3 August 2026, so the notice date is 14 days after the start date, in the 8 to 21 day band (60% refund). 60% of the B.Tech tuition fee of MRL 42,000 is MRL 25,200. (The library and IT fee is not refunded in this band.)",
+      "sections": [
+        "5.1",
+        "7.1",
+        "7.4",
+        "10.4"
+      ]
+    },
+    {
+      "id": "Q21",
+      "type": "multi-section",
+      "question": "In a course with 40 scheduled sessions, a student attended 22 sessions. A further 8 of the missed sessions fell on days of approved medical leave (6 teaching days of medical leave in total). Is the student eligible for the end-semester examination in that course?",
+      "answer": "Yes. Approved medical leave sessions count as attended, so attendance is (22 + 8) / 40 = 75%, which meets the 75% minimum.",
+      "sections": [
+        "3.1",
+        "10.2"
+      ]
+    },
+    {
+      "id": "Q22",
+      "type": "multi-section",
+      "question": "A Tier 1 scholarship holder earns 40 credits in the academic year with no F or XF grade, and the CGPA at the annual review is 8.60. What happens to the scholarship?",
+      "answer": "The student moves to Tier 2 (Northfield Excellence Award, 50% tuition waiver). The 36-credit and no-F/XF conditions are met, and the CGPA is below the Tier 1 minimum of 9.00 but at least 8.00, so the student moves to the highest tier whose threshold the CGPA meets (Tier 2, minimum 8.50).",
+      "sections": [
+        "8.2",
+        "8.4"
+      ]
+    },
+    {
+      "id": "Q23",
+      "type": "multi-section",
+      "question": "A B.Tech student has earned 154 credits from courses other than the internship, and has completed the mandatory 8-week internship with result S. Does the student meet the credit requirement for graduation?",
+      "answer": "Yes. The 6 internship credits count towards the total, so 154 + 6 = 160 credits, which equals the B.Tech requirement of 160.",
+      "sections": [
+        "13.1",
+        "14.1",
+        "14.2"
+      ]
+    },
+    {
+      "id": "Q24",
+      "type": "multi-section",
+      "question": "A student has unpaid library dues of MRL 350. Can the student receive a hall ticket for the end-semester examinations?",
+      "answer": "No. Library dues above MRL 200 create a clearance hold, and a clearance hold blocks the release of hall tickets.",
+      "sections": [
+        "5.2",
+        "12.4"
+      ]
+    },
+    {
+      "id": "Q25",
+      "type": "multi-section",
+      "question": "A Tier 2 scholarship holder receives a Level 2 academic integrity penalty. What happens to the scholarship?",
+      "answer": "The scholarship is forfeited for the rest of the academic year in which the penalty is imposed (Level 2 is grade F in the course and disciplinary probation for 1 semester). The student may be considered again at the next annual review.",
+      "sections": [
+        "6.4",
+        "8.5"
+      ]
+    },
+    {
+      "id": "Q26",
+      "type": "exception",
+      "question": "How are class sessions missed during approved medical leave treated for the 75% attendance rule, and is there a limit?",
+      "answer": "They are counted as attended, up to a maximum of 20 teaching days of medical leave in a semester. This is an exception to the general attendance rule.",
+      "sections": [
+        "10.2",
+        "3.1"
+      ]
+    },
+    {
+      "id": "Q27",
+      "type": "exception",
+      "question": "The hostel curfew is 22:00. Can a resident enter the residence block later than that without a late entry being recorded?",
+      "answer": "Yes, but only during the study week and the two end-semester examination weeks, and only for residents holding a Late Study Pass: they may enter as late as 00:45. (Exception to the curfew rule.)",
+      "sections": [
+        "12.1",
+        "9.3"
+      ]
+    },
+    {
+      "id": "Q28",
+      "type": "exception",
+      "question": "What is the maximum number of credits a student may register for in a semester in the last two semesters of a programme, and what conditions apply?",
+      "answer": "Up to 30 credits, if the extra credits are needed to graduate on time; the student needs a CGPA of at least 6.00 and the approval of the Dean of Academic Affairs. (The general undergraduate maximum is 26 credits.)",
+      "sections": [
+        "14.3",
+        "4.2"
+      ]
+    },
+    {
+      "id": "Q29",
+      "type": "amendment",
+      "question": "What is the current window and fee for applying for re-evaluation of an end-semester answer script?",
+      "answer": "Within 10 days of the publication of results, at MRL 600 per course. This is Amendment 1, effective 1 January 2026; it superseded the earlier rule of 7 days and MRL 400 per course.",
+      "sections": [
+        "5.5.2"
+      ]
+    },
+    {
+      "id": "Q30",
+      "type": "amendment",
+      "question": "What late fee is charged on tuition and other fees paid after the due date for payments falling due from 1 February 2026?",
+      "answer": "MRL 500 for each week or part of a week of delay, up to a maximum of MRL 3,000. This is Amendment 2; it superseded the earlier rule of MRL 100 per calendar day, up to MRL 2,000.",
+      "sections": [
+        "7.2"
+      ]
+    }
+  ],
+  "unanswerable_questions": [
+    {
+      "id": "U01",
+      "type": "not in document",
+      "question": "Where on campus may students park their cars, and is a permit required?",
+      "expected_response": "not found in the document",
+      "topic_excluded_from_handbook": "parking"
+    },
+    {
+      "id": "U02",
+      "type": "not in document",
+      "question": "How much does an annual parking permit cost for hostel residents?",
+      "expected_response": "not found in the document",
+      "topic_excluded_from_handbook": "parking"
+    },
+    {
+      "id": "U03",
+      "type": "not in document",
+      "question": "What is on the cafeteria menu for lunch on Mondays?",
+      "expected_response": "not found in the document",
+      "topic_excluded_from_handbook": "cafeteria"
+    },
+    {
+      "id": "U04",
+      "type": "not in document",
+      "question": "When is the Institute football team's next match fixture?",
+      "expected_response": "not found in the document",
+      "topic_excluded_from_handbook": "sports fixtures"
+    },
+    {
+      "id": "U05",
+      "type": "not in document",
+      "question": "What are the dates of the inter-college athletics sports meet this year?",
+      "expected_response": "not found in the document",
+      "topic_excluded_from_handbook": "sports fixtures"
+    },
+    {
+      "id": "U06",
+      "type": "not in document",
+      "question": "On what date is the annual alumni reunion held?",
+      "expected_response": "not found in the document",
+      "topic_excluded_from_handbook": "alumni events"
+    }
+  ]
+}
