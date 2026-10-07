@@ -1,0 +1,1573 @@
+{
+  "metadata": {
+    "generated_at": "2026-10-07T05:54:23.670857+00:00",
+    "llm_model": "gemini-3.8-flash",
+    "judge_model": "gemini-3.8-flash",
+    "total_questions": 36,
+    "answerable_count": 30,
+    "unanswerable_count": 6
+  },
+  "summary_metrics": {
+    "retrieval": {
+      "section_hit_at_5": 1.0,
+      "mean_section_recall": 0.9722
+    },
+    "generation": {
+      "mean_factual_correctness": 0.9667,
+      "exact_or_correct_pct": 0.0333,
+      "verdict_distribution": {
+        "EXACT_MATCH": 28,
+        "INCORRECT": 1,
+        "CORRECT": 1
+      }
+    },
+    "citations": {
+      "total_citations_evaluated": 44,
+      "citation_grounding_rate": 1.0,
+      "quote_veracity_rate": 0.9773
+    },
+    "refusal": {
+      "confusion_matrix": {
+        "TP": 6,
+        "FP": 1,
+        "TN": 29,
+        "FN": 0
+      },
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1_score": 0.9231
+    }
+  },
+  "category_breakdown": {
+    "amendment": {
+      "count": 2,
+      "hit_at_5": 1.0,
+      "section_recall": 1.0,
+      "factual_correctness": 1.0
+    },
+    "exception": {
+      "count": 3,
+      "hit_at_5": 1.0,
+      "section_recall": 1.0,
+      "factual_correctness": 1.0
+    },
+    "multi-section": {
+      "count": 6,
+      "hit_at_5": 1.0,
+      "section_recall": 0.861,
+      "factual_correctness": 0.833
+    },
+    "not in document": {
+      "count": 6,
+      "refusal_rate": 1.0,
+      "factual_score": 1.0
+    },
+    "simple fact": {
+      "count": 12,
+      "hit_at_5": 1.0,
+      "section_recall": 1.0,
+      "factual_correctness": 1.0
+    },
+    "table lookup": {
+      "count": 7,
+      "hit_at_5": 1.0,
+      "section_recall": 1.0,
+      "factual_correctness": 1.0
+    }
+  },
+  "detailed_results": [
+    {
+      "id": "Q01",
+      "type": "simple fact",
+      "question": "What is the minimum percentage of scheduled class sessions a student must attend in a course to be eligible for the end-semester examination in that course?",
+      "ground_truth_answer": "75%",
+      "ground_truth_sections": [
+        "3.1"
+      ],
+      "candidate_answer": "A student must attend at least 75% of the scheduled class sessions in a course to be eligible to sit the end-semester examination in that course (Section 3.1, p. 12). Lectures, tutorials, and laboratory sessions are counted together, and attendance is calculated separately for each course.",
+      "citations": [
+        {
+          "chunk_id": "chk0024",
+          "section_id": "3.1",
+          "page": 12,
+          "quote": "A student must attend at least 75% of the scheduled class sessions in a course in order to be eligible to sit the end-semester examination in that course."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.8-flash",
+      "latency_sec": 13.79,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "3.1",
+          "4.3",
+          "3.7",
+          "5.2",
+          "5.9"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly states the minimum attendance percentage (75%) required for the end-semester examination and includes accurate supporting details from the policy."
+      }
+    },
+    {
+      "id": "Q02",
+      "type": "simple fact",
+      "question": "How many teaching days does a full semester contain?",
+      "ground_truth_answer": "80 teaching days (16 teaching weeks of 5 teaching days).",
+      "ground_truth_sections": [
+        "1.3.1"
+      ],
+      "candidate_answer": "A full semester contains 80 teaching days, consisting of 16 teaching weeks with five teaching days (Monday to Friday) per week (Section 1.3.1, p. 6).",
+      "citations": [
+        {
+          "chunk_id": "chk0005",
+          "section_id": "1.3.1",
+          "page": 6,
+          "quote": "A teaching week has five teaching days (Monday to Friday), so a full semester contains 80 teaching days."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.8-flash",
+      "latency_sec": 141.24,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "1.3.1",
+          "10.1",
+          "10.2",
+          "10.3",
+          "7.2"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately includes all critical facts and figures from the ground truth (80 teaching days, 16 teaching weeks, 5 teaching days per week) without any contradictions."
+      }
+    },
+    {
+      "id": "Q03",
+      "type": "simple fact",
+      "question": "After how many hours is a notice posted on the Student Portal deemed received by the student?",
+      "ground_truth_answer": "48 hours after posting.",
+      "ground_truth_sections": [
+        "1.5"
+      ],
+      "candidate_answer": "A notice posted on the Student Portal is deemed received by the student 48 hours after posting (Section 1.5, p. 8).",
+      "citations": [
+        {
+          "chunk_id": "chk0010",
+          "section_id": "1.5",
+          "page": 8,
+          "quote": "A notice posted on the Student Portal is deemed received by the student 48 hours after posting."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.8-flash",
+      "latency_sec": 15.47,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "1.5",
+          "10.4",
+          "3.2",
+          "11.3.2",
+          "5.2"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures the correct timeframe of 48 hours as stated in the ground-truth answer without introducing contradictions or missing any critical details."
+      }
+    },
+    {
+      "id": "Q04",
+      "type": "simple fact",
+      "question": "What is the application fee for admission, and is it refundable?",
+      "ground_truth_answer": "MRL 1,000; it is not refundable.",
+      "ground_truth_sections": [
+        "2.3"
+      ],
+      "candidate_answer": "The application fee for admission is MRL 1,000 and it is not refundable (Section 2.3, p. 10). Furthermore, the application fee is never refunded under the fee refund schedule (Section 7.4, p. 23).",
+      "citations": [
+        {
+          "chunk_id": "chk0017",
+          "section_id": "2.3",
+          "page": 10,
+          "quote": "The application fee is MRL 1,000 and is not refundable."
+        },
+        {
+          "chunk_id": "chk0074",
+          "section_id": "7.4",
+          "page": 23,
+          "quote": "The registration fee and the application fee are never refunded."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 7.61,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "2.3",
+          "2.9",
+          "2.5",
+          "7.4",
+          "7.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 0.5
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly identifies the application fee as MRL 1,000 and states that it is not refundable, fully capturing all critical facts from the ground truth answer."
+      }
+    },
+    {
+      "id": "Q05",
+      "type": "simple fact",
+      "question": "How many contact hours of laboratory work represent one credit?",
+      "ground_truth_answer": "32 contact hours of laboratory work per semester (16 for lectures or tutorials).",
+      "ground_truth_sections": [
+        "4.1"
+      ],
+      "candidate_answer": "According to the Student Academic Policy Handbook, one credit represents 32 contact hours of laboratory work in a semester (Section 4.1, p. 14; Section 15.1, p. 39).",
+      "citations": [
+        {
+          "chunk_id": "chk0033",
+          "section_id": "4.1",
+          "page": 14,
+          "quote": "One credit represents 16 contact hours of lectures or tutorials, or 32 contact hours of laboratory work, in a semester."
+        },
+        {
+          "chunk_id": "chk0142",
+          "section_id": "15.1",
+          "page": 39,
+          "quote": "Credit. The unit of academic workload; one credit equals 16 lecture hours or 32 laboratory hours."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.8-flash",
+      "latency_sec": 6.88,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "4.1",
+          "15.1",
+          "5.3",
+          "12.7",
+          "4.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 0.5
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures the critical fact that 32 contact hours of laboratory work represent one credit, matching the ground truth without any contradictions or missing details."
+      }
+    },
+    {
+      "id": "Q06",
+      "type": "simple fact",
+      "question": "What two minimums must a student reach to pass a theory course?",
+      "ground_truth_answer": "At least 40% of the total marks and at least 35% of the maximum marks in the end-semester examination.",
+      "ground_truth_sections": [
+        "4.3"
+      ],
+      "candidate_answer": "To pass a theory course, a student needs at least 40% of the total marks and at least 35% of the maximum marks in the end-semester examination (Section 4.3, p. 14).",
+      "citations": [
+        {
+          "chunk_id": "chk0035",
+          "section_id": "4.3",
+          "page": 14,
+          "quote": "To pass a course a student needs at least 40% of the total marks and at least 35% of the maximum marks in the end-semester examination."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 6.26,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "4.3",
+          "14.2",
+          "5.3",
+          "2.2.1",
+          "3.1"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures both required minimum thresholds (at least 40% of the total marks and at least 35% of the maximum marks in the end-semester examination) without any contradictions or missing facts."
+      }
+    },
+    {
+      "id": "Q07",
+      "type": "simple fact",
+      "question": "What similarity score causes a written assignment to be referred automatically to the Academic Integrity Panel?",
+      "ground_truth_answer": "A score above 40% (a score above 25% triggers faculty review only).",
+      "ground_truth_sections": [
+        "6.2"
+      ],
+      "candidate_answer": "A similarity score above 40% on a written assignment is referred automatically to the Academic Integrity Panel (Section 6.2, p. 20).",
+      "citations": [
+        {
+          "chunk_id": "chk0057",
+          "section_id": "6.2",
+          "page": 20,
+          "quote": "A score above 40% is referred automatically to the AIP."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 3.94,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "6.2",
+          "6.1",
+          "6.4",
+          "6.5",
+          "6.6"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures the critical similarity score threshold (>40%) for automatic referral to the Academic Integrity Panel, perfectly matching the ground-truth reference."
+      }
+    },
+    {
+      "id": "Q08",
+      "type": "simple fact",
+      "question": "By what time must hostel residents be inside their residence block?",
+      "ground_truth_answer": "22:00 (the gates reopen at 05:30).",
+      "ground_truth_sections": [
+        "9.3"
+      ],
+      "candidate_answer": "Hostel residents must be inside their residence block by 22:00 (Section 9.3, p. 27). However, an exception exists during the study week and the two weeks of end-semester examinations for students holding a Late Study Pass issued by the Chief Librarian; these residents may enter their residence block as late as 00:45 without a late entry being recorded (Section 12.1, p. 33).",
+      "citations": [
+        {
+          "chunk_id": "chk0089",
+          "section_id": "9.3",
+          "page": 27,
+          "quote": "Residents must be inside their residence block by 22:00."
+        },
+        {
+          "chunk_id": "chk0110",
+          "section_id": "12.1",
+          "page": 33,
+          "quote": "Hostel residents with this pass may enter their residence block as late as 00:45 without a late entry being recorded."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 13.21,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "9.3",
+          "9.8",
+          "12.1",
+          "9.4",
+          "9.9"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 0.5
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate correctly provides the primary curfew time (22:00) and further demonstrates comprehensive accuracy by including additional policy nuances from the handbook regarding late entry exceptions."
+      }
+    },
+    {
+      "id": "Q09",
+      "type": "simple fact",
+      "question": "What is the maximum number of semesters of leave of absence a student may take during a programme?",
+      "ground_truth_answer": "2 semesters.",
+      "ground_truth_sections": [
+        "10.3"
+      ],
+      "candidate_answer": "A student may take at most 2 semesters of leave of absence during a programme (Section 10.3, p. 29).",
+      "citations": [
+        {
+          "chunk_id": "chk0099",
+          "section_id": "10.3",
+          "page": 29,
+          "quote": "A student may take at most 2 semesters of leave of absence during a programme."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 13.2,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "10.3",
+          "14.4",
+          "14.3",
+          "15.1",
+          "10.2"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly states the maximum number of semesters of leave of absence as 2, matching the official reference answer completely."
+      }
+    },
+    {
+      "id": "Q10",
+      "type": "simple fact",
+      "question": "How many members does the Student Grievance Committee have?",
+      "ground_truth_answer": "Six: the Dean of Student Welfare (chair), two faculty members, two student representatives and one nominee of the Registrar.",
+      "ground_truth_sections": [
+        "11.1"
+      ],
+      "candidate_answer": "The Student Grievance Committee (SGC) has six members: the Dean of Student Welfare (chair), two faculty members, two student representatives, and one nominee of the Registrar (Section 11.1, p. 31).",
+      "citations": [
+        {
+          "chunk_id": "chk0103",
+          "section_id": "11.1",
+          "page": 31,
+          "quote": "The Student Grievance Committee (SGC) has six members: the Dean of Student Welfare (chair), two faculty members, two student representatives and one nominee of the Registrar."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 14.62,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "11.1",
+          "11.2",
+          "11.3.1",
+          "11.5",
+          "1.4"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately lists the exact number of members and their exact composition as stated in the ground-truth reference."
+      }
+    },
+    {
+      "id": "Q11",
+      "type": "simple fact",
+      "question": "How many books may a postgraduate student borrow from the library, and for how long?",
+      "ground_truth_answer": "10 books for 30 days.",
+      "ground_truth_sections": [
+        "12.2"
+      ],
+      "candidate_answer": "A postgraduate student may borrow 10 books for 30 days (Section 12.2, p. 33).",
+      "citations": [
+        {
+          "chunk_id": "chk0111",
+          "section_id": "12.2",
+          "page": 33,
+          "quote": "A postgraduate student may borrow 10 books for 30 days."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 6.53,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "12.2",
+          "12.1",
+          "12.7",
+          "12.6",
+          "12.8"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately provides both the correct number of books (10) and the correct borrowing duration (30 days) as stated in the ground truth."
+      }
+    },
+    {
+      "id": "Q12",
+      "type": "simple fact",
+      "question": "What is the minimum length, and the credit value, of the mandatory B.Tech internship?",
+      "ground_truth_answer": "At least 8 weeks, worth 6 credits.",
+      "ground_truth_sections": [
+        "13.1"
+      ],
+      "candidate_answer": "The mandatory internship for B.Tech students must be at least 8 weeks in length and is worth 6 credits (Section 13.1, p. 35).",
+      "citations": [
+        {
+          "chunk_id": "chk0119",
+          "section_id": "13.1",
+          "page": 35,
+          "quote": "B.Tech: at least 8 weeks, worth 6 credits"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 10.23,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "13.1",
+          "13.1",
+          "14.1",
+          "13.1",
+          "2.6"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures both the minimum length (at least 8 weeks) and the credit value (6 credits) of the mandatory B.Tech internship without any contradictions."
+      }
+    },
+    {
+      "id": "Q13",
+      "type": "table lookup",
+      "question": "How many annual seats does the B.Sc. Applied Data Science programme have?",
+      "ground_truth_answer": "120 seats.",
+      "ground_truth_sections": [
+        "2.1"
+      ],
+      "candidate_answer": "The B.Sc. Applied Data Science programme has 120 annual seats (Section 2.1, p. 9).",
+      "citations": [
+        {
+          "chunk_id": "chk0013",
+          "section_id": "2.1",
+          "page": 9,
+          "quote": "B.Sc. Applied Data Science | 6 | 120 | 55% | 80 of 200 (NAA)"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 8.41,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "2.1",
+          "1.2",
+          "2.1",
+          "7.1",
+          "2.2.1"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly identifies the number of annual seats as 120, fully matching the official ground truth answer."
+      }
+    },
+    {
+      "id": "Q14",
+      "type": "table lookup",
+      "question": "A student has 65% attendance in a course. What is the consequence and the condonation fee?",
+      "ground_truth_answer": "Eligible only after condonation approved by the Dean of Academic Affairs (60% to below 70% band); fee MRL 2,500 per course.",
+      "ground_truth_sections": [
+        "3.3"
+      ],
+      "candidate_answer": "For attendance in the 60% to below 70% band (such as 65%), the general consequence of low attendance is that the student is debarred from the end-semester examination and recorded with an XF grade unless an exception is made via condonation (Section 3.3, p. 12). Under the condonation exception rule for this band, the student is eligible to sit the examination only after condonation is approved by the Dean of Academic Affairs (Section 3.3, p. 12). The required condonation fee for this band is MRL 2,500 (Section 3.3, p. 12), which must be paid to the Bursar before the hall ticket is released (Section 3.4, p. 13).",
+      "citations": [
+        {
+          "chunk_id": "chk0027",
+          "section_id": "3.3",
+          "page": 12,
+          "quote": "60% to below 70% | Eligible only after condonation approved by the Dean of Academic Affairs | MRL 2,500"
+        },
+        {
+          "chunk_id": "chk0026",
+          "section_id": "3.3",
+          "page": 12,
+          "quote": "Condonation is the Institute's term for permission to sit the examination despite attendance below 75%."
+        },
+        {
+          "chunk_id": "chk0029",
+          "section_id": "3.4",
+          "page": 13,
+          "quote": "Applications in the 60% to below 70% band are forwarded by the ARC to the Dean of Academic Affairs. The fee in Table 2 is payable to the Bursar before the hall ticket is released."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 5.55,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "3.3",
+          "3.3",
+          "3.4",
+          "3.3",
+          "5.2"
+        ]
+      },
+      "citations_eval": {
+        "count": 3,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 0.667
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures all critical details from the ground truth, noting the eligibility condition for the 60% to below 70% attendance band, approval by the Dean of Academic Affairs, and the exact condonation fee of MRL 2,500."
+      }
+    },
+    {
+      "id": "Q15",
+      "type": "table lookup",
+      "question": "How many grade points does a student receive for a total of 72% in a course?",
+      "ground_truth_answer": "8 grade points (letter grade B+, band 70 to 79).",
+      "ground_truth_sections": [
+        "4.4"
+      ],
+      "candidate_answer": "A student who receives 72% in a course is awarded an letter grade of B+ and receives 8 grade points (Section 4.4, p. 14).",
+      "citations": [
+        {
+          "chunk_id": "chk0037",
+          "section_id": "4.4",
+          "page": 14,
+          "quote": "70 to 79 | B+ | 8 | Very good"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 5.02,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "15.1",
+          "4.6",
+          "4.4",
+          "5.6",
+          "4.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer accurately captures all critical facts from the ground truth, including the grade points (8), percentage (72%), letter grade (B+), and grading band, without any contradictions."
+      }
+    },
+    {
+      "id": "Q16",
+      "type": "table lookup",
+      "question": "On what dates are the Spring 2027 end-semester examinations held?",
+      "ground_truth_answer": "3 to 14 May 2027.",
+      "ground_truth_sections": [
+        "5.1"
+      ],
+      "candidate_answer": "The Spring 2027 end-semester examinations are held from 3 to 14 May 2027 (Section 5.1, p. 17).",
+      "citations": [
+        {
+          "chunk_id": "chk0045",
+          "section_id": "5.1",
+          "page": 17,
+          "quote": "End-semester examinations | 30 November to 11 December 2026 | 3 to 14 May 2027"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 8.9,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "5.1",
+          "1.3.1",
+          "5.1",
+          "7.2",
+          "14.5"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly and precisely states the dates of the Spring 2027 end-semester examinations as 3 to 14 May 2027, matching the ground-truth reference completely."
+      }
+    },
+    {
+      "id": "Q17",
+      "type": "table lookup",
+      "question": "What is the tuition fee per semester for the M.Tech programme?",
+      "ground_truth_answer": "MRL 48,000.",
+      "ground_truth_sections": [
+        "7.1"
+      ],
+      "candidate_answer": "The tuition fee per semester for the M.Tech programme is MRL 48,000 (Section 7.1, p. 22).",
+      "citations": [
+        {
+          "chunk_id": "chk0066",
+          "section_id": "7.1",
+          "page": 22,
+          "quote": "Tuition fee per semester | 42,000 | 36,000 | 48,000 | 45,000"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 12.99,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "7.1",
+          "2.1",
+          "7.4",
+          "2.1",
+          "10.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly provides the exact tuition fee per semester for the M.Tech programme (MRL 48,000) as stated in the ground truth, matching all critical facts."
+      }
+    },
+    {
+      "id": "Q18",
+      "type": "table lookup",
+      "question": "What percentage of the tuition fee is refunded if a withdrawal notice is received 30 days after the semester start date?",
+      "ground_truth_answer": "30% (band: 22 to 35 days after the start date).",
+      "ground_truth_sections": [
+        "7.4"
+      ],
+      "candidate_answer": "If a withdrawal notice is received 30 days after the semester start date, the tuition fee refund is 30% (Section 7.4, p. 23).",
+      "citations": [
+        {
+          "chunk_id": "chk0073",
+          "section_id": "7.4",
+          "page": 23,
+          "quote": "| 22 to 35 days after the start date | 30% |"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 3.13,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "7.4",
+          "7.4",
+          "9.2",
+          "7.4",
+          "10.4"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly states the exact percentage (30%) of the tuition fee refunded for a withdrawal notice received 30 days after the semester start date, fully matching the ground truth."
+      }
+    },
+    {
+      "id": "Q19",
+      "type": "table lookup",
+      "question": "Which merit scholarship tier gives a 50% tuition waiver, what is its minimum CGPA, and how many awards are made per year?",
+      "ground_truth_answer": "Tier 2, the Northfield Excellence Award; minimum CGPA 8.50; 40 annual awards.",
+      "ground_truth_sections": [
+        "8.2"
+      ],
+      "candidate_answer": "Tier 2, named the Northfield Excellence Award, gives a 50% tuition waiver (Section 8.2, p. 25). Its minimum CGPA is 8.50, and there are a maximum of 40 annual awards across all programmes in an academic year (Section 8.2, p. 25).",
+      "citations": [
+        {
+          "chunk_id": "chk0081",
+          "section_id": "8.2",
+          "page": 25,
+          "quote": "Tier 2 | Northfield Excellence Award | 8.50 | 50% | 40"
+        },
+        {
+          "chunk_id": "chk0080",
+          "section_id": "8.2",
+          "page": 25,
+          "quote": "The waiver applies to the tuition fee only. Figures for annual awards are the maximum number of recipients across all programmes in an academic year."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 12.0,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "8.2",
+          "8.2",
+          "8.4",
+          "8.3",
+          "14.6"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly identifies the tier (Tier 2 / Northfield Excellence Award), the tuition waiver amount (50%), the minimum CGPA (8.50), and the number of annual awards (40), matching all critical facts from the ground truth answer."
+      }
+    },
+    {
+      "id": "Q20",
+      "type": "multi-section",
+      "question": "A B.Tech student submits a withdrawal notice on the Student Portal that the Registrar receives on 17 August 2026. How much tuition fee is refunded?",
+      "ground_truth_answer": "MRL 25,200. The Autumn 2026 semester starts on 3 August 2026, so the notice date is 14 days after the start date, in the 8 to 21 day band (60% refund). 60% of the B.Tech tuition fee of MRL 42,000 is MRL 25,200. (The library and IT fee is not refunded in this band.)",
+      "ground_truth_sections": [
+        "5.1",
+        "7.1",
+        "7.4",
+        "10.4"
+      ],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 5.94,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 0.5,
+        "retrieved_sections": [
+          "10.4",
+          "7.4",
+          "14.5",
+          "1.5",
+          "7.2"
+        ]
+      },
+      "citations_eval": {
+        "count": 0,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 0.0
+      },
+      "factual_correctness": {
+        "score": 0.0,
+        "verdict": "INCORRECT",
+        "explanation": "Model refused an answerable question."
+      }
+    },
+    {
+      "id": "Q21",
+      "type": "multi-section",
+      "question": "In a course with 40 scheduled sessions, a student attended 22 sessions. A further 8 of the missed sessions fell on days of approved medical leave (6 teaching days of medical leave in total). Is the student eligible for the end-semester examination in that course?",
+      "ground_truth_answer": "Yes. Approved medical leave sessions count as attended, so attendance is (22 + 8) / 40 = 75%, which meets the 75% minimum.",
+      "ground_truth_sections": [
+        "3.1",
+        "10.2"
+      ],
+      "candidate_answer": "To be eligible to sit the end-semester examination in a course, a student must attend at least 75% of the scheduled class sessions in that course (Section 3.1, p. 12). For a course with 40 scheduled sessions, 75% attendance requires at least 30 sessions. However, under Section 10.2 (Medical Leave), class sessions that fall on days of approved medical leave are counted as attended, up to a maximum of 20 teaching days of medical leave in a semester (Section 10.2, p. 29). The student attended 22 regular sessions and had 6 teaching days of medical leave (covering 8 missed sessions) which count as attended. Therefore, the student's total counted attendance is 22 + 8 = 30 sessions, meeting the 75% requirement. The student is eligible for the end-semester examination in that course.",
+      "citations": [
+        {
+          "chunk_id": "chk0024",
+          "section_id": "3.1",
+          "page": 12,
+          "quote": "A student must attend at least 75% of the scheduled class sessions in a course in order to be eligible to sit the end-semester examination in that course."
+        },
+        {
+          "chunk_id": "chk0098",
+          "section_id": "10.2",
+          "page": 29,
+          "quote": "Class sessions that fall on days of approved medical leave are counted as attended, up to a maximum of 20 teaching days of medical leave in a semester."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.94,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "10.2",
+          "3.6",
+          "3.1",
+          "5.7",
+          "10.2"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all critical facts, calculations, and the final correct conclusion from the ground-truth answer, while providing additional contextual detail."
+      }
+    },
+    {
+      "id": "Q22",
+      "type": "multi-section",
+      "question": "A Tier 1 scholarship holder earns 40 credits in the academic year with no F or XF grade, and the CGPA at the annual review is 8.60. What happens to the scholarship?",
+      "ground_truth_answer": "The student moves to Tier 2 (Northfield Excellence Award, 50% tuition waiver). The 36-credit and no-F/XF conditions are met, and the CGPA is below the Tier 1 minimum of 9.00 but at least 8.00, so the student moves to the highest tier whose threshold the CGPA meets (Tier 2, minimum 8.50).",
+      "ground_truth_sections": [
+        "8.2",
+        "8.4"
+      ],
+      "candidate_answer": "Awards are reviewed once a year after the Spring results (Section 8.4, p. 25). To keep an award, a student must have earned at least 36 credits during the academic year and must have no F or XF grade in that year, which conditions are met in this case with 40 credits and no F or XF grades (Section 8.4, p. 25). Furthermore, \"[a] recipient whose CGPA falls below the threshold of the current tier, but is still at least 8.00, moves to the highest tier whose threshold the CGPA meets\" (Section 8.4, p. 25). Since the student's CGPA is 8.60, it falls below the Tier 1 threshold (9.00) but is at least 8.00, so the student moves to Tier 2 (Northfield Excellence Award, which requires a minimum CGPA of 8.50) (Section 8.2, p. 25; Section 8.4, p. 25).",
+      "citations": [
+        {
+          "chunk_id": "chk0083",
+          "section_id": "8.4",
+          "page": 25,
+          "quote": "A recipient whose CGPA falls below the threshold of the current tier, but is still at least 8.00, moves to the highest tier whose threshold the CGPA meets."
+        },
+        {
+          "chunk_id": "chk0081",
+          "section_id": "8.2",
+          "page": 25,
+          "quote": "Table 7. Merit scholarship tiers | Tier 2 | Northfield Excellence Award | 8.50 | 50% | 40"
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 3.75,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "8.4",
+          "8.5",
+          "8.2",
+          "8.2",
+          "13.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 0.5,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all critical facts, conditions, and thresholds from the ground truth. It correctly identifies that the student meets the credit and grade conditions, but because the CGPA of 8.60 falls below the Tier 1 threshold (9.00), the student moves to Tier 2 (Northfield Excellence Award, 50% tuition waiver) as its minimum threshold of 8.50 is met."
+      }
+    },
+    {
+      "id": "Q23",
+      "type": "multi-section",
+      "question": "A B.Tech student has earned 154 credits from courses other than the internship, and has completed the mandatory 8-week internship with result S. Does the student meet the credit requirement for graduation?",
+      "ground_truth_answer": "Yes. The 6 internship credits count towards the total, so 154 + 6 = 160 credits, which equals the B.Tech requirement of 160.",
+      "ground_truth_sections": [
+        "13.1",
+        "14.1",
+        "14.2"
+      ],
+      "candidate_answer": "Yes, the student meets the credit requirement for graduation. To graduate, a B.Tech student must earn a total of 160 credits, which includes the internship credits (Section 14.1, p. 37). The mandatory B.Tech internship is worth 6 credits (Section 13.1, p. 35). Given that the student has earned 154 credits from courses other than the internship and 6 credits from the mandatory internship, the total equals the required 160 credits.",
+      "citations": [
+        {
+          "chunk_id": "chk0126",
+          "section_id": "14.1",
+          "page": 37,
+          "quote": "To graduate a student must earn the following total number of credits, which include the internship credits in Section 13.1: B.Tech, 160 credits"
+        },
+        {
+          "chunk_id": "chk0119",
+          "section_id": "13.1",
+          "page": 35,
+          "quote": "B.Tech: at least 8 weeks, worth 6 credits"
+        },
+        {
+          "chunk_id": "chk0120",
+          "section_id": "13.1",
+          "page": 35,
+          "quote": "These credits count towards the total required for graduation."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.62,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 0.667,
+        "retrieved_sections": [
+          "14.1",
+          "14.7",
+          "13.1",
+          "13.1",
+          "13.1"
+        ]
+      },
+      "citations_eval": {
+        "count": 3,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "CORRECT",
+        "explanation": "The candidate answer accurately captures all critical facts and calculations from the ground-truth answer, correctly concluding that the student meets the 160-credit graduation requirement by adding the 6 internship credits to the 154 earned credits."
+      }
+    },
+    {
+      "id": "Q24",
+      "type": "multi-section",
+      "question": "A student has unpaid library dues of MRL 350. Can the student receive a hall ticket for the end-semester examinations?",
+      "ground_truth_answer": "No. Library dues above MRL 200 create a clearance hold, and a clearance hold blocks the release of hall tickets.",
+      "ground_truth_sections": [
+        "5.2",
+        "12.4"
+      ],
+      "candidate_answer": "No, the student cannot receive a hall ticket. When a student's unpaid library dues exceed MRL 200, the library records a clearance hold (Section 12.4, p. 33; Section 15.1, p. 39). This clearance hold blocks the release of hall tickets (Section 5.2, p. 17; Section 12.4, p. 33). Since the student has unpaid library dues of MRL 350, which exceeds the MRL 200 threshold, a clearance hold will be placed, preventing the issuance of their hall ticket (Section 12.4, p. 33).",
+      "citations": [
+        {
+          "chunk_id": "chk0113",
+          "section_id": "12.4",
+          "page": 33,
+          "quote": "When a student's unpaid library dues exceed MRL 200, the library records a clearance hold. A clearance hold blocks the release of hall tickets"
+        },
+        {
+          "chunk_id": "chk0046",
+          "section_id": "5.2",
+          "page": 17,
+          "quote": "A hall ticket is released only if the student satisfies all of the following: the attendance requirement in Section 3.1, or condonation under Section 3.4; no fees unpaid more than 28 days after the due date (see Section 7.2); and no clearance hold from the library (see Section 12.4)."
+        },
+        {
+          "chunk_id": "chk0140",
+          "section_id": "15.1",
+          "page": 39,
+          "quote": "Clearance hold. A block placed by the library when unpaid dues exceed MRL 200."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 24.74,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "12.4",
+          "5.2",
+          "14.5",
+          "7.2",
+          "15.1"
+        ]
+      },
+      "citations_eval": {
+        "count": 3,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 0.667
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer correctly states that the student cannot receive a hall ticket, accurately identifies the threshold (MRL 200), explains the consequence (clearance hold blocking the hall ticket), and applies it to the given scenario (MRL 350) without any contradictions or missing facts."
+      }
+    },
+    {
+      "id": "Q25",
+      "type": "multi-section",
+      "question": "A Tier 2 scholarship holder receives a Level 2 academic integrity penalty. What happens to the scholarship?",
+      "ground_truth_answer": "The scholarship is forfeited for the rest of the academic year in which the penalty is imposed (Level 2 is grade F in the course and disciplinary probation for 1 semester). The student may be considered again at the next annual review.",
+      "ground_truth_sections": [
+        "6.4",
+        "8.5"
+      ],
+      "candidate_answer": "According to Section 8.5 (p. 26), a scholarship holder who receives an integrity penalty of Level 2 or higher forfeits the scholarship for the rest of the academic year in which the penalty is imposed. The student may be considered again at the next annual review (Section 8.5, p. 26).",
+      "citations": [
+        {
+          "chunk_id": "chk0084",
+          "section_id": "8.5",
+          "page": 26,
+          "quote": "A scholarship holder who receives an integrity penalty of Level 2 or higher (see Section 6.4) forfeits the scholarship for the rest of the academic year in which the penalty is imposed."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.68,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "8.5",
+          "6.7",
+          "8.2",
+          "6.4",
+          "6.4"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all critical facts and conditions from the ground-truth answer, stating that the scholarship is forfeited for the rest of the academic year and that the student may be considered again at the next annual review."
+      }
+    },
+    {
+      "id": "Q26",
+      "type": "exception",
+      "question": "How are class sessions missed during approved medical leave treated for the 75% attendance rule, and is there a limit?",
+      "ground_truth_answer": "They are counted as attended, up to a maximum of 20 teaching days of medical leave in a semester. This is an exception to the general attendance rule.",
+      "ground_truth_sections": [
+        "10.2",
+        "3.1"
+      ],
+      "candidate_answer": "Under the general attendance rule in Section 3.1, a student must attend at least 75% of scheduled class sessions in a course to be eligible to sit the end-semester examination (Section 3.1, p. 12). However, there is an exception for approved medical leave (Section 10.2, p. 29). Class sessions that fall on days of approved medical leave are counted as attended, up to a maximum limit of 20 teaching days of medical leave in a semester, and this applies to every course in the semester (Section 10.2, p. 29).",
+      "citations": [
+        {
+          "chunk_id": "chk0024",
+          "section_id": "3.1",
+          "page": 12,
+          "quote": "A student must attend at least 75% of the scheduled class sessions in a course in order to be eligible to sit the end-semester examination in that course."
+        },
+        {
+          "chunk_id": "chk0098",
+          "section_id": "10.2",
+          "page": 29,
+          "quote": "Class sessions that fall on days of approved medical leave are counted as attended, up to a maximum of 20 teaching days of medical leave in a semester. This applies to every course in the semester."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.82,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "10.2",
+          "3.1",
+          "3.7",
+          "3.6",
+          "3.5"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all critical facts from the ground-truth answer: missed sessions during approved medical leave are counted as attended, up to a maximum limit of 20 teaching days in a semester, and it is recognized as an exception to the 75% attendance rule."
+      }
+    },
+    {
+      "id": "Q27",
+      "type": "exception",
+      "question": "The hostel curfew is 22:00. Can a resident enter the residence block later than that without a late entry being recorded?",
+      "ground_truth_answer": "Yes, but only during the study week and the two end-semester examination weeks, and only for residents holding a Late Study Pass: they may enter as late as 00:45. (Exception to the curfew rule.)",
+      "ground_truth_sections": [
+        "12.1",
+        "9.3"
+      ],
+      "candidate_answer": "Yes, an exception applies to the hostel curfew under Section 12.1 (p. 33). The general rule requires residents to be inside their residence block by 22:00 (Section 9.3, p. 27). However, as an exception during the study week and the two weeks of end-semester examinations, hostel residents who hold a Late Study Pass may enter their residence block as late as 00:45 without a late entry being recorded (Section 12.1, p. 33). This pass is issued free of charge upon request by the Chief Librarian and is valid for those three weeks only (Section 12.1, p. 33).",
+      "citations": [
+        {
+          "chunk_id": "chk0089",
+          "section_id": "9.3",
+          "page": 27,
+          "quote": "Residents must be inside their residence block by 22:00."
+        },
+        {
+          "chunk_id": "chk0110",
+          "section_id": "12.1",
+          "page": 33,
+          "quote": "Hostel residents with this pass may enter their residence block as late as 00:45 without a late entry being recorded. The Chief Librarian issues the pass free of charge on request; it is valid for those three weeks only."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.71,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "9.3",
+          "12.1",
+          "9.9",
+          "9.2",
+          "9.4"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all the critical facts from the ground truth answer, including the timing, conditions (study week and two end-semester examination weeks), the requirement of a Late Study Pass, and the extended time of 00:45. It accurately matches the policy details without contradicting the reference."
+      }
+    },
+    {
+      "id": "Q28",
+      "type": "exception",
+      "question": "What is the maximum number of credits a student may register for in a semester in the last two semesters of a programme, and what conditions apply?",
+      "ground_truth_answer": "Up to 30 credits, if the extra credits are needed to graduate on time; the student needs a CGPA of at least 6.00 and the approval of the Dean of Academic Affairs. (The general undergraduate maximum is 26 credits.)",
+      "ground_truth_sections": [
+        "14.3",
+        "4.2"
+      ],
+      "candidate_answer": "As a general rule regarding credit limits, the maximum credit load in a semester for undergraduate students is 26 credits, and for postgraduate students is 22 credits (Section 4.2, p. 14). However, as an exception under Section 14.3, a student in either of the last two semesters of a programme may register for up to 30 credits in that semester if the extra credits are needed to graduate on time (Section 14.3, p. 37). To qualify for this exception, the student must meet two specific conditions: they must have a CGPA of at least 6.00, and they must secure the approval of the Dean of Academic Affairs (Section 14.3, p. 37).",
+      "citations": [
+        {
+          "chunk_id": "chk0034",
+          "section_id": "4.2",
+          "page": 14,
+          "quote": "For undergraduate students the minimum is 16 credits, the normal load is 20 credits and the maximum is 26 credits. For postgraduate students the minimum is 12 credits, the normal load is 18 credits and the maximum is 22 credits."
+        },
+        {
+          "chunk_id": "chk0128",
+          "section_id": "14.3",
+          "page": 37,
+          "quote": "A student in either of the last two semesters of a programme may register for up to 30 credits in that semester if the extra credits are needed to graduate on time. The student must have a CGPA of at least 6.00 and the approval of the Dean of Academic Affairs."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 3.15,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "14.3",
+          "4.2",
+          "14.4",
+          "10.3",
+          "13.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 2,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer completely and accurately captures all critical facts, limits, and conditions from the ground-truth answer, including the 30-credit maximum, the requirement to graduate on time, the minimum CGPA of 6.00, and the required approval from the Dean of Academic Affairs."
+      }
+    },
+    {
+      "id": "Q29",
+      "type": "amendment",
+      "question": "What is the current window and fee for applying for re-evaluation of an end-semester answer script?",
+      "ground_truth_answer": "Within 10 days of the publication of results, at MRL 600 per course. This is Amendment 1, effective 1 January 2026; it superseded the earlier rule of 7 days and MRL 400 per course.",
+      "ground_truth_sections": [
+        "5.5.2"
+      ],
+      "candidate_answer": "According to Section 5.5.2 (p. 18), under Amendment 1 (effective 1 January 2026), an application for re-evaluation must be made within 10 days of the publication of results, and the fee is MRL 600 per course. This new rule supersedes the old rule from Edition 4.0, which required applications within 7 days and charged MRL 400 per course.",
+      "citations": [
+        {
+          "chunk_id": "chk0050",
+          "section_id": "5.5.2",
+          "page": 18,
+          "quote": "New rule: an application must be made within 10 days of the publication of results, and the fee is MRL 600 per course. The new rule applies to all results published on or after 1 January 2026 and supersedes the old rule."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.64,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "5.5.1",
+          "5.5.2",
+          "5.8",
+          "15.1",
+          "5.5.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all critical facts, figures, thresholds, conditions, and amendment updates from the ground truth answer accurately, including the 10-day window, MRL 600 fee per course, and the historical context of the amendment."
+      }
+    },
+    {
+      "id": "Q30",
+      "type": "amendment",
+      "question": "What late fee is charged on tuition and other fees paid after the due date for payments falling due from 1 February 2026?",
+      "ground_truth_answer": "MRL 500 for each week or part of a week of delay, up to a maximum of MRL 3,000. This is Amendment 2; it superseded the earlier rule of MRL 100 per calendar day, up to MRL 2,000.",
+      "ground_truth_sections": [
+        "7.2"
+      ],
+      "candidate_answer": "According to Section 7.2 (p. 22), under Amendment 2 (effective 1 February 2026), a late fee of MRL 500 is charged for each week or part of a week of delay, up to a maximum of MRL 3,000. This new rule supersedes the old rule for every payment that falls due on or after 1 February 2026.",
+      "citations": [
+        {
+          "chunk_id": "chk0069",
+          "section_id": "7.2",
+          "page": 22,
+          "quote": "AMENDMENT 2 (effective 1 February 2026). Old rule (Edition 4.0 and Edition 4.1): a late fee of MRL 100 was charged for each calendar day of delay, up to a maximum of MRL 2,000. New rule: a late fee of MRL 500 is charged for each week or part of a week of delay, up to a maximum of MRL 3,000. The new rule supersedes the old rule for every payment that falls due on or after 1 February 2026."
+        }
+      ],
+      "refusal": false,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 3.95,
+      "retrieval": {
+        "hit_at_5": 1.0,
+        "section_recall": 1.0,
+        "retrieved_sections": [
+          "7.2",
+          "7.2",
+          "7.2",
+          "9.2",
+          "7.3"
+        ]
+      },
+      "citations_eval": {
+        "count": 1,
+        "grounding_rate": 1.0,
+        "veracity_rate": 1.0,
+        "section_match_rate": 1.0
+      },
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "EXACT_MATCH",
+        "explanation": "The candidate answer captures all critical facts, figures, thresholds, and amendment details from the ground truth answer accurately."
+      }
+    },
+    {
+      "id": "U01",
+      "type": "not in document",
+      "question": "Where on campus may students park their cars, and is a permit required?",
+      "ground_truth_answer": "not found in the document",
+      "ground_truth_sections": [],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "effective_refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 7.0,
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "REFUSED_CORRECTLY",
+        "explanation": "Correctly refused unanswerable question."
+      }
+    },
+    {
+      "id": "U02",
+      "type": "not in document",
+      "question": "How much does an annual parking permit cost for hostel residents?",
+      "ground_truth_answer": "not found in the document",
+      "ground_truth_sections": [],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "effective_refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 10.43,
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "REFUSED_CORRECTLY",
+        "explanation": "Correctly refused unanswerable question."
+      }
+    },
+    {
+      "id": "U03",
+      "type": "not in document",
+      "question": "What is on the cafeteria menu for lunch on Mondays?",
+      "ground_truth_answer": "not found in the document",
+      "ground_truth_sections": [],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "effective_refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 8.4,
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "REFUSED_CORRECTLY",
+        "explanation": "Correctly refused unanswerable question."
+      }
+    },
+    {
+      "id": "U04",
+      "type": "not in document",
+      "question": "When is the Institute football team's next match fixture?",
+      "ground_truth_answer": "not found in the document",
+      "ground_truth_sections": [],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "effective_refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 2.33,
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "REFUSED_CORRECTLY",
+        "explanation": "Correctly refused unanswerable question."
+      }
+    },
+    {
+      "id": "U05",
+      "type": "not in document",
+      "question": "What are the dates of the inter-college athletics sports meet this year?",
+      "ground_truth_answer": "not found in the document",
+      "ground_truth_sections": [],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "effective_refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 1.94,
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "REFUSED_CORRECTLY",
+        "explanation": "Correctly refused unanswerable question."
+      }
+    },
+    {
+      "id": "U06",
+      "type": "not in document",
+      "question": "On what date is the annual alumni reunion held?",
+      "ground_truth_answer": "not found in the document",
+      "ground_truth_sections": [],
+      "candidate_answer": "This information is not found in the Student Academic Policy Handbook.",
+      "citations": [],
+      "refusal": true,
+      "effective_refusal": true,
+      "model_used": "gemini-3.5-flash-lite",
+      "latency_sec": 5.74,
+      "factual_correctness": {
+        "score": 1.0,
+        "verdict": "REFUSED_CORRECTLY",
+        "explanation": "Correctly refused unanswerable question."
+      }
+    }
+  ]
+}

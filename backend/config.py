@@ -40,3 +40,5 @@ RECORDS_PATH: Path = PROCESSED_DIR / "records.jsonl"
 CHUNKS_PATH: Path = PROCESSED_DIR / "chunks.jsonl"
 EVAL_DIR: Path = ROOT / "eval"
 ANSWER_KEY_PATH: Path = EVAL_DIR / "answer_key.json"
+EVAL_REPORT_PATH: Path = EVAL_DIR / "eval_report.json"
+
